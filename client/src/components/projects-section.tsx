@@ -152,6 +152,7 @@ export function ProjectsSection() {
         
         <div className="text-center mt-12">
           <Button 
+            onClick={() => window.open('https://github.com/muhammad-ali', '_blank')}
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             data-testid="button-view-all-projects"
           >

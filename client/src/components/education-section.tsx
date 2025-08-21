@@ -76,7 +76,7 @@ export function EducationSection() {
         
         <div className="grid md:grid-cols-2 gap-8">
           {/* Education */}
-          <Card className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20">
+          <Card className="glass-effect border-slate-700/50 bg-slate-800/20">
             <CardContent className="p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
@@ -140,7 +140,7 @@ export function EducationSection() {
           </Card>
           
           {/* Certifications */}
-          <Card className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20">
+          <Card className="glass-effect border-slate-700/50 bg-slate-800/20">
             <CardContent className="p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center mr-4">

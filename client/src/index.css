@@ -112,22 +112,13 @@
 
 /* Custom styling for glassmorphism effects */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.dark .glass-effect {
   background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(135deg, hsl(237.24 100% 46.67%) 0%, hsl(264.35 81.82% 59.61%) 100%);
-}
-
-.dark .gradient-bg {
   background: linear-gradient(135deg, hsl(237.24 55.56% 20%) 0%, hsl(264.35 45% 12%) 100%);
 }
 
@@ -239,10 +230,6 @@ html {
 
 /* Selection */
 ::selection {
-  background: hsl(203.8863 88.2845% 53.1373% / 0.3);
-}
-
-.dark ::selection {
   background: hsl(264.35 81.82% 59.61% / 0.3);
 }
 
@@ -281,11 +268,6 @@ html {
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .glass-effect {
-    background: rgba(0, 0, 0, 0.9);
-    border: 2px solid hsl(203.8863 88.2845% 53.1373%);
-  }
-  
-  .dark .glass-effect {
     background: rgba(255, 255, 255, 0.95);
     color: hsl(0 0% 0%);
     border: 2px solid hsl(264.35 81.82% 59.61%);

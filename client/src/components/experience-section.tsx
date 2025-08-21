@@ -65,16 +65,16 @@ const experiences = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-slate-900">
+    <section id="experience" className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Professional{' '}
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               Experience
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-xl text-gray-300">
             My career journey and achievements
           </p>
         </div>
@@ -89,7 +89,7 @@ export function ExperienceSection() {
               <div key={experience.id} className="relative flex items-center">
                 <div className={`flex-1 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'} ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
                   <Card 
-                    className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20 inline-block max-w-lg w-full hover:scale-105 transition-transform"
+                    className="glass-effect border-slate-700/50 bg-slate-800/20 inline-block max-w-lg w-full hover:scale-105 transition-transform"
                     data-testid={`card-experience-${experience.id}`}
                   >
                     <CardContent className="p-8">
@@ -101,7 +101,7 @@ export function ExperienceSection() {
                         )}
                       </div>
                       
-                      <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white" data-testid={`text-title-${experience.id}`}>
+                      <h3 className="text-2xl font-bold mb-2 text-white" data-testid={`text-title-${experience.id}`}>
                         {experience.title}
                       </h3>
                       
@@ -114,7 +114,7 @@ export function ExperienceSection() {
                         {experience.company}
                       </p>
                       
-                      <div className="flex items-center gap-4 mb-4 text-gray-600 dark:text-gray-300 text-sm">
+                      <div className="flex items-center gap-4 mb-4 text-gray-300 text-sm">
                         <div className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
                           <span data-testid={`text-duration-${experience.id}`}>{experience.duration}</span>
@@ -125,7 +125,7 @@ export function ExperienceSection() {
                         </div>
                       </div>
                       
-                      <ul className={`space-y-2 text-gray-700 dark:text-gray-200 ${index % 2 === 0 ? 'text-left' : ''}`}>
+                      <ul className={`space-y-2 text-gray-200 ${index % 2 === 0 ? 'text-left' : ''}`}>
                         {experience.description.map((item, itemIndex) => (
                           <li key={itemIndex} data-testid={`text-description-${experience.id}-${itemIndex}`}>
                             • {item}
@@ -137,7 +137,7 @@ export function ExperienceSection() {
                 </div>
                 
                 {/* Timeline dot */}
-                <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white dark:border-slate-900 hidden lg:block ${
+                <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-slate-900 hidden lg:block ${
                   experience.color === 'emerald' ? 'bg-emerald-500' :
                   experience.color === 'blue' ? 'bg-blue-500' :
                   experience.color === 'purple' ? 'bg-purple-500' :

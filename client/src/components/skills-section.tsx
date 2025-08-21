@@ -77,7 +77,7 @@ export function SkillsSection() {
           {skillCategories.map((category, categoryIndex) => (
             <Card 
               key={categoryIndex}
-              className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20"
+              className="glass-effect border-slate-700/50 bg-slate-800/20"
               data-testid={`card-skills-${category.title.toLowerCase()}`}
             >
               <CardContent className="p-8">

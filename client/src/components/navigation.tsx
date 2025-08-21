@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useTheme } from '@/components/theme-provider';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Moon, Sun, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const navItems = [
   { href: '#home', label: 'Home' },
@@ -14,7 +13,6 @@ const navItems = [
 ];
 
 export function Navigation() {
-  const { theme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -50,7 +48,7 @@ export function Navigation() {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       } ${
         isScrolled 
-          ? 'bg-white/10 dark:bg-slate-900/10 backdrop-blur-md border-b border-white/20 dark:border-slate-700/50' 
+          ? 'bg-slate-900/10 backdrop-blur-md border-b border-slate-700/50' 
           : 'bg-transparent'
       }`}
       data-testid="navigation"
@@ -71,7 +69,7 @@ export function Navigation() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-300 hover:text-blue-400 transition-colors"
                 data-testid={`nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
@@ -80,27 +78,13 @@ export function Navigation() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className="glass-effect hover:bg-white/20 dark:hover:bg-slate-800/20"
-              data-testid="theme-toggle"
-            >
-              {theme === 'light' ? (
-                <Moon className="h-4 w-4" />
-              ) : (
-                <Sun className="h-4 w-4" />
-              )}
-            </Button>
-            
             {/* Mobile Menu */}
             <Sheet>
               <SheetTrigger asChild>
                 <Button 
                   variant="ghost" 
                   size="sm" 
-                  className="md:hidden glass-effect hover:bg-white/20 dark:hover:bg-slate-800/20"
+                  className="md:hidden glass-effect hover:bg-slate-800/20"
                   data-testid="mobile-menu-toggle"
                 >
                   <Menu className="h-4 w-4" />
@@ -108,7 +92,7 @@ export function Navigation() {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="glass-effect border-white/20 dark:border-slate-700/50"
+                className="glass-effect border-slate-700/50"
                 data-testid="mobile-menu"
               >
                 <div className="flex flex-col space-y-6 mt-16">
@@ -116,7 +100,7 @@ export function Navigation() {
                     <button
                       key={item.href}
                       onClick={() => scrollToSection(item.href)}
-                      className="text-lg text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                      className="text-lg text-gray-300 hover:text-blue-400 transition-colors text-left"
                       data-testid={`mobile-nav-${item.label.toLowerCase()}`}
                     >
                       {item.label}

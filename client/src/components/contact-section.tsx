@@ -134,7 +134,7 @@ export function ContactSection() {
             {contactInfo.map((info, index) => (
               <Card 
                 key={index}
-                className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20"
+                className="glass-effect border-slate-700/50 bg-slate-800/20"
                 data-testid={`card-contact-${info.title.toLowerCase()}`}
               >
                 <CardContent className="p-8">
@@ -174,7 +174,7 @@ export function ContactSection() {
               </Card>
             ))}
             
-            <Card className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20">
+            <Card className="glass-effect border-slate-700/50 bg-slate-800/20">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold mb-4 text-white" data-testid="text-connect-title">
                   Connect With Me
@@ -198,7 +198,7 @@ export function ContactSection() {
           </div>
           
           {/* Contact Form */}
-          <Card className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20">
+          <Card className="glass-effect border-slate-700/50 bg-slate-800/20">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-8 text-center text-white" data-testid="text-form-title">
                 Send Message

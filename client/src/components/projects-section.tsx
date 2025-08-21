@@ -61,16 +61,16 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-slate-900">
+    <section id="projects" className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Featured{' '}
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-xl text-gray-300">
             Some of my recent work and personal projects
           </p>
         </div>
@@ -79,7 +79,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <Card 
               key={project.id}
-              className="glass-effect border-white/20 dark:border-slate-700/50 bg-white/10 dark:bg-slate-800/20 overflow-hidden group hover:scale-105 transition-all duration-300"
+              className="glass-effect border-slate-700/50 bg-slate-800/20 overflow-hidden group hover:scale-105 transition-all duration-300"
               data-testid={`card-project-${project.id}`}
             >
               <div className="relative">
@@ -107,11 +107,11 @@ export function ProjectsSection() {
               </div>
               
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white" data-testid={`text-project-title-${project.id}`}>
+                <h3 className="text-2xl font-bold mb-3 text-white" data-testid={`text-project-title-${project.id}`}>
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed" data-testid={`text-project-description-${project.id}`}>
+                <p className="text-gray-300 mb-6 leading-relaxed" data-testid={`text-project-description-${project.id}`}>
                   {project.description}
                 </p>
                 
@@ -120,7 +120,7 @@ export function ProjectsSection() {
                     <Badge 
                       key={tagIndex}
                       variant="secondary" 
-                      className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs"
+                      className="bg-gray-700 text-gray-300 text-xs"
                       data-testid={`tag-${project.id}-${tagIndex}`}
                     >
                       {tag}
@@ -139,7 +139,7 @@ export function ProjectsSection() {
                   </Button>
                   <Button 
                     variant="outline"
-                    className="px-6 py-3 glass-effect border-white/30 dark:border-slate-700/50 hover:bg-white/20 dark:hover:bg-slate-800/20 transition-all"
+                    className="px-6 py-3 glass-effect border-slate-700/50 hover:bg-slate-800/20 transition-all"
                     data-testid={`button-code-${project.id}`}
                   >
                     <Github className="w-4 h-4" />

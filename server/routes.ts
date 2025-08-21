@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactMessageSchema } from "@shared/schema";
+import { appendToSheet } from "./sheets-service";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -9,10 +10,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post('/api/contact', async (req, res) => {
     try {
       const validatedData = insertContactMessageSchema.parse(req.body);
+      
+      // Store in local storage
       const contactMessage = await storage.createContactMessage(validatedData);
       
-      // In a real application, you would send an email here
-      // For now, we'll just store the message and return success
+      // Also save to Google Sheets
+      try {
+        await appendToSheet({
+          name: validatedData.name,
+          email: validatedData.email,
+          message: validatedData.message
+        });
+        console.log('Contact message saved to Google Sheets');
+      } catch (sheetsError) {
+        console.error('Failed to save to Google Sheets:', sheetsError);
+        // Continue with success response even if Sheets fails
+      }
+      
       console.log('New contact message received:', contactMessage);
       
       res.json({ 

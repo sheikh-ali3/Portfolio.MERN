@@ -14,7 +14,7 @@ const navItems = [
 ];
 
 export function Navigation() {
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -41,9 +41,22 @@ export function Navigation() {
     if (item.isRoute) {
       setLocation(item.href);
     } else {
-      const element = document.querySelector(item.href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      // If we're not on the home page and trying to navigate to a section, go to home first
+      if (location !== '/') {
+        setLocation('/');
+        // Wait for navigation to complete, then scroll to section
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        // We're on home page, just scroll to section
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
   };

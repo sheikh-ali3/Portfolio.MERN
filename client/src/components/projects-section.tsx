@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { useLocation } from 'wouter';
 import { ExternalLink, Github, Eye, Play, Sun } from 'lucide-react';
 
 const projects = [
@@ -60,6 +61,8 @@ const projects = [
 ];
 
 export function ProjectsSection() {
+  const [, setLocation] = useLocation();
+  
   return (
     <section id="projects" className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
@@ -152,7 +155,7 @@ export function ProjectsSection() {
         
         <div className="text-center mt-12">
           <Button 
-            onClick={() => window.open('https://github.com/muhammad-ali', '_blank')}
+            onClick={() => setLocation('/projects')}
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             data-testid="button-view-all-projects"
           >

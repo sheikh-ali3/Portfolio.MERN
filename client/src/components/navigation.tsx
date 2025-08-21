@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useLocation } from 'wouter';
 import { Menu } from 'lucide-react';
 
 const navItems = [
-  { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#home', label: 'Home', isRoute: false },
+  { href: '#about', label: 'About', isRoute: false },
+  { href: '#skills', label: 'Skills', isRoute: false },
+  { href: '#experience', label: 'Experience', isRoute: false },
+  { href: '/projects', label: 'Projects', isRoute: true },
+  { href: '#contact', label: 'Contact', isRoute: false },
 ];
 
 export function Navigation() {
+  const [, setLocation] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -35,10 +37,14 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (item: { href: string; isRoute: boolean }) => {
+    if (item.isRoute) {
+      setLocation(item.href);
+    } else {
+      const element = document.querySelector(item.href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -57,7 +63,7 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <div 
             className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer"
-            onClick={() => scrollToSection('#home')}
+            onClick={() => setLocation('/')}
             data-testid="logo"
           >
             M.Ali
@@ -68,7 +74,7 @@ export function Navigation() {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item)}
                 className="text-gray-300 hover:text-blue-400 transition-colors"
                 data-testid={`nav-${item.label.toLowerCase()}`}
               >
@@ -99,7 +105,7 @@ export function Navigation() {
                   {navItems.map((item) => (
                     <button
                       key={item.href}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={() => handleNavigation(item)}
                       className="text-lg text-gray-300 hover:text-blue-400 transition-colors text-left"
                       data-testid={`mobile-nav-${item.label.toLowerCase()}`}
                     >

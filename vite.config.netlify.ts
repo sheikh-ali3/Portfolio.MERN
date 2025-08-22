@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
-  base: '/', // Changed from './' to '/' for Netlify
+  base: '', // Changed to empty string for relative paths
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,

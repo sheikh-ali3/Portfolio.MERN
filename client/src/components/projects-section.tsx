@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
 import { ExternalLink, Github, Eye, Play, Sun } from 'lucide-react';
 
-const projects = [
+const allProjects = [
   {
     id: 'weather-app-rn',
     title: 'Weather App',
@@ -18,6 +18,7 @@ const projects = [
     year: '2025',
     demoIcon: Eye,
     gradient: 'from-blue-500 to-purple-500',
+    featured: true,
     demoUrl: 'https://expo.dev/accounts/the_dragon/projects/weather-app/builds/43967438-c0c8-4547-bf9a-744fdae73816',
     githubUrl: 'https://github.com/moiniyan/weather-app'
   },
@@ -33,6 +34,7 @@ const projects = [
     year: '2025',
     demoIcon: Eye,
     gradient: 'from-emerald-500 to-teal-500',
+    featured: true,
     demoUrl: 'https://voicetotextconverterweb.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/voice-to-text-converter'
   },
@@ -63,13 +65,49 @@ const projects = [
     year: '2025',
     demoIcon: Sun,
     gradient: 'from-amber-500 to-orange-500',
+    featured: false,
     demoUrl: 'https://what-weather-app.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/weather-app'
+  },
+  {
+    id: 'clinical-code-dictionary',
+    title: 'CodeQuest',
+    subtitle: 'Healthcare Technology',
+    description: 'NLP-Based Clinical Code Dictionary. Advanced full-stack web application for searching and managing medical codes across multiple healthcare systems (ICD-9, ICD-10, CPT, HCPCS, SNOMED, LOINC, and HCC). Features NLP-powered search, CSV bulk operations, and comprehensive admin interface.',
+    image: '/codeQuest.jpg',
+    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'Healthcare', 'Drizzle ORM'],
+    primaryTag: 'Healthcare',
+    secondaryTag: 'Full-Stack',
+    year: '2024',
+    demoIcon: Eye,
+    gradient: 'from-blue-500 to-indigo-500',
+    featured: true,
+    demoUrl: 'https://code-quest-taupe-chi.vercel.app/',
+    githubUrl: 'https://github.com/sheikh-ali3/CodeQuest'
+  },
+  {
+    id: 'resume-match',
+    title: 'ResumeMatch',
+    subtitle: 'AI-Powered Resume Analysis',
+    description: 'Intelligent full-stack platform that uses Natural Language Processing (NLP) to analyze compatibility between candidate resumes and job descriptions. Features JWT authentication, multi-format file processing, and AI-powered skill matching algorithms.',
+    image: '/resumeAI.jpg',
+    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'AI', 'JWT', 'Drizzle ORM'],
+    primaryTag: 'AI/NLP',
+    secondaryTag: 'Full-Stack',
+    year: '2024',
+    demoIcon: Eye,
+    gradient: 'from-purple-500 to-pink-500',
+    featured: true,
+    demoUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker.io',
+    githubUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker'
   }
 ];
 
 export function ProjectsSection() {
   const [, setLocation] = useLocation();
+  
+  // Filter to show only featured projects
+  const featuredProjects = allProjects.filter(project => project.featured === true);
   
   return (
     <section id="projects" className="py-20 bg-slate-900">
@@ -87,7 +125,7 @@ export function ProjectsSection() {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <Card 
               key={project.id}
               className="glass-effect border-slate-700/50 bg-slate-800/20 overflow-hidden group hover:scale-105 transition-all duration-300"

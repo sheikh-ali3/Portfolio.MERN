@@ -31,8 +31,8 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-emerald-500/20 dark:bg-emerald-400/10 rounded-full animate-float-slow"></div>
       </div>
       
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 items-center">
           <div className="text-center lg:text-left animate-slideInUp">
             <div className="flex justify-center lg:justify-start mb-4">
               <Badge className="glass-effect border-white/30 dark:border-slate-700/50 text-white bg-white/10 dark:bg-slate-800/20">

@@ -51,7 +51,7 @@ const allProjects = [
     year: '2025',
     demoIcon: Play,
     gradient: 'from-purple-500 to-pink-500',
-    featured: true,
+    featured: false,
     demoUrl: 'https://tick-tack-toe-web.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/tik-toe-game'
   },
@@ -67,7 +67,7 @@ const allProjects = [
     year: '2025',
     demoIcon: Sun,
     gradient: 'from-amber-500 to-orange-500',
-    featured: true,
+    featured: false,
     demoUrl: 'https://what-weather-app.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/weather-app'
   },
@@ -134,6 +134,38 @@ const allProjects = [
     featured: false,
     demoUrl: 'https://frontend-moaqa.vercel.app/',
     githubUrl: 'https://github.com/sheikh-ali3/frontend-moaqa'
+  },
+  {
+    id: 'clinical-code-dictionary',
+    title: 'CodeQuest',
+    subtitle: 'Healthcare Technology',
+    description: 'NLP-Based Clinical Code Dictionary. Advanced full-stack web application for searching and managing medical codes across multiple healthcare systems (ICD-9, ICD-10, CPT, HCPCS, SNOMED, LOINC, and HCC). Features NLP-powered search, CSV bulk operations, and comprehensive admin interface.',
+    image: '/codeQuest.jpg',
+    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'Healthcare', 'Drizzle ORM'],
+    primaryTag: 'Healthcare',
+    secondaryTag: 'Full-Stack',
+    year: '2024',
+    demoIcon: Eye,
+    gradient: 'from-blue-500 to-indigo-500',
+    featured: true,
+    demoUrl: 'https://code-quest-taupe-chi.vercel.app/',
+    githubUrl: 'https://github.com/sheikh-ali3/CodeQuest'
+  },
+  {
+    id: 'resume-match',
+    title: 'ResumeMatch',
+    subtitle: 'AI-Powered Resume Analysis',
+    description: 'Intelligent full-stack platform that uses Natural Language Processing (NLP) to analyze compatibility between candidate resumes and job descriptions. Features JWT authentication, multi-format file processing, and AI-powered skill matching algorithms.',
+    image: '/resumeAI.jpg',
+    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'AI', 'JWT', 'Drizzle ORM'],
+    primaryTag: 'AI/NLP',
+    secondaryTag: 'Full-Stack',
+    year: '2024',
+    demoIcon: Eye,
+    gradient: 'from-purple-500 to-pink-500',
+    featured: true,
+    demoUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker.io',
+    githubUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker'
   }
 ];
 

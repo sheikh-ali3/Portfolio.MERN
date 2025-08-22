@@ -38,21 +38,23 @@
   to = "/index.html"
   status = 200
 
-# Handle assets with proper MIME types
+# Handle CSS files with proper MIME types
 [[headers]]
-  for = "/assets/*.css"
+  for = "*.css"
   [headers.values]
     Content-Type = "text/css"
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Handle JavaScript files with proper MIME types
 [[headers]]
-  for = "/assets/*.js"
+  for = "*.js"
   [headers.values]
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Handle module JavaScript files
 [[headers]]
-  for = "/assets/*.mjs"
+  for = "*.mjs"
   [headers.values]
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
@@ -68,21 +70,6 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # Cache headers for static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
 [[headers]]
   for = "*.png"
   [headers.values]

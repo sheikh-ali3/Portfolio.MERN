@@ -12,20 +12,26 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
+  base: './',
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
+    assetsDir: "assets",
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar', '@radix-ui/react-button', '@radix-ui/react-card', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-select', '@radix-ui/react-tabs', '@radix-ui/react-toast'],
-          utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
-          animations: ['framer-motion', 'lucide-react'],
-          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
-          charts: ['recharts'],
-          icons: ['react-icons']
-        }
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `assets/[name]-[hash][extname]`;
+          }
+          if (/css/i.test(ext)) {
+            return `assets/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
       }
     },
     chunkSizeWarningLimit: 1000,
@@ -48,7 +54,5 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true
-  },
-  // Ensure proper base path for deployment
-  base: '/'
+  }
 });

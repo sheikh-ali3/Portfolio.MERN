@@ -48,5 +48,7 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true
-  }
+  },
+  // Ensure proper base path for deployment
+  base: '/'
 });

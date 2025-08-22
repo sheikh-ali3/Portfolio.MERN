@@ -16,22 +16,22 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
-    assetsDir: "assets",
+    assetsDir: "",
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-            return `assets/[name]-[hash][extname]`;
+            return `[name]-[hash][extname]`;
           }
           if (/css/i.test(ext)) {
-            return `assets/[name]-[hash][extname]`;
+            return `[name]-[hash][extname]`;
           }
-          return `assets/[name]-[hash][extname]`;
+          return `[name]-[hash][extname]`;
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: '[name]-[hash].js',
+        entryFileNames: '[name]-[hash].js',
       }
     },
     chunkSizeWarningLimit: 1000,

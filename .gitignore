@@ -72,7 +72,6 @@ dist
 
 # Gatsby files
 .cache/
-public
 
 # Storybook build outputs
 .out
@@ -111,7 +110,6 @@ Thumbs.db
 
 # Uploads
 uploads/
-public/uploads/
 
 # TypeScript
 *.tsbuildinfo

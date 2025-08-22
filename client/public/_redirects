@@ -1,0 +1,8 @@
+# Handle CSS files explicitly - prevent fallback to index.html
+*.css    -    200
+
+# Handle JavaScript files explicitly - prevent fallback to index.html
+*.js     -    200
+
+# Handle SPA routing - redirect all other routes to index.html
+/*    /index.html    200

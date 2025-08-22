@@ -11,7 +11,7 @@ const allProjects = [
     title: 'Weather App',
     subtitle: 'React Native',
     description: 'Real-time weather application built with React Native, featuring OpenWeather API integration, multi-language support, and location-based forecasts.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/weather.jpg',
     tags: ['React Native', 'OpenWeather API', 'Geolocation', 'Expo'],
     primaryTag: 'React Native',
     secondaryTag: 'API',
@@ -19,49 +19,57 @@ const allProjects = [
     year: '2025',
     demoIcon: Eye,
     gradient: 'from-blue-500 to-purple-500',
-    featured: true
+    featured: true,
+    demoUrl: 'https://expo.dev/accounts/the_dragon/projects/weather-app/builds/43967438-c0c8-4547-bf9a-744fdae73816',
+    githubUrl: 'https://github.com/moiniyan/weather-app'
   },
   {
     id: 'voice-to-text',
     title: 'Voice-to-Text Converter',
     subtitle: 'Web Speech API',
     description: 'Speech-to-text application with real-time transcription capabilities, responsive UI design, and advanced audio processing features.',
-    image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/work-5.jpg',
     tags: ['Web Speech API', 'JavaScript', 'HTML5', 'CSS3'],
     primaryTag: 'Web Speech API',
     secondaryTag: 'Real-time',
     year: '2025',
     demoIcon: Eye,
     gradient: 'from-emerald-500 to-teal-500',
-    featured: true
+    featured: true,
+    demoUrl: 'https://voicetotextconverterweb.netlify.app/',
+    githubUrl: 'https://github.com/Ammarkashifbhatti/voice-to-text-converter'
   },
   {
     id: 'tic-tac-toe',
     title: 'Tic-Tac-Toe Game',
     subtitle: 'Interactive Web Game',
     description: 'Interactive web-based Tic-Tac-Toe game demonstrating DOM manipulation, event handling, and game logic implementation.',
-    image: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/tik-tak-toe.jpg',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'Game Logic'],
     primaryTag: 'Game',
     secondaryTag: 'Interactive',
     year: '2025',
     demoIcon: Play,
     gradient: 'from-purple-500 to-pink-500',
-    featured: true
+    featured: true,
+    demoUrl: 'https://tick-tack-toe-web.netlify.app/',
+    githubUrl: 'https://github.com/Ammarkashifbhatti/tik-toe-game'
   },
   {
     id: 'weather-forecasting-web',
     title: 'Weather Forecasting Web App',
     subtitle: 'Responsive Web Application',
     description: 'Comprehensive weather application with real-time data, API integration, and responsive design for optimal user experience.',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/work-4.jpeg',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'Weather API'],
     primaryTag: 'Web App',
     secondaryTag: 'Responsive',
     year: '2025',
     demoIcon: Sun,
     gradient: 'from-amber-500 to-orange-500',
-    featured: true
+    featured: true,
+    demoUrl: 'https://what-weather-app.netlify.app/',
+    githubUrl: 'https://github.com/Ammarkashifbhatti/weather-app'
   },
   {
     id: 'quiz-platform',
@@ -75,7 +83,9 @@ const allProjects = [
     year: '2024',
     demoIcon: Code,
     gradient: 'from-indigo-500 to-cyan-500',
-    featured: false
+    featured: false,
+    demoUrl: 'https://github.com/sheikh-ali3/quiz-platform',
+    githubUrl: 'https://github.com/sheikh-ali3/Online-Quiz-Platform'
   },
   {
     id: 'bank-management',
@@ -83,41 +93,47 @@ const allProjects = [
     subtitle: 'C++ Desktop Application',
     description: 'Premium banking software providing full account control for users with manager oversight and comprehensive activity monitoring.',
     image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    tags: ['C++', 'File Management', 'Object-Oriented', 'Security'],
+    tags: ['C++','Console Application', 'File Management', 'Object-Oriented', 'Security'],
     primaryTag: 'C++',
     secondaryTag: 'System',
     year: '2024',
     demoIcon: Database,
     gradient: 'from-red-500 to-pink-500',
-    featured: false
+    featured: false,
+    demoUrl: 'https://github.com/sheikh-ali3/bank-management',
+    githubUrl: 'https://github.com/sheikh-ali3/bank-management'
   },
   {
     id: 'portfolio-website',
     title: 'Personal Portfolio Website',
     subtitle: 'React + TypeScript',
     description: 'Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS featuring dark theme, smooth animations, and contact functionality.',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/portfolio.jpg',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
     primaryTag: 'React',
     secondaryTag: 'Portfolio',
     year: '2025',
     demoIcon: Globe,
     gradient: 'from-violet-500 to-purple-500',
-    featured: false
+    featured: false,
+    demoUrl: 'https://github.com/sheikh-ali3/portfolio-website',
+    githubUrl: 'https://github.com/sheikh-ali3/portfolio-website'
   },
   {
-    id: 'task-management',
-    title: 'Task Management App',
+    id: 'crm-moaqa',
+    title: 'CRM Web App',
     subtitle: 'MERN Stack',
-    description: 'Full-stack task management application with user authentication, real-time updates, and collaborative features for team productivity.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    tags: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Authentication'],
+    description: 'Comprehensive Customer Relationship Management system built with MERN stack for MOAQA company, featuring user authentication, real-time updates, and collaborative features for team productivity.',
+    image: '/crm.jpg',
+    tags: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Authentication', 'CRM'],
     primaryTag: 'Full-Stack',
     secondaryTag: 'MERN',
     year: '2024',
     demoIcon: Eye,
     gradient: 'from-green-500 to-teal-500',
-    featured: false
+    featured: false,
+    demoUrl: 'https://frontend-moaqa.vercel.app/',
+    githubUrl: 'https://github.com/sheikh-ali3/frontend-moaqa'
   }
 ];
 
@@ -215,6 +231,7 @@ export default function Projects() {
                   
                   <div className="flex space-x-4">
                     <Button 
+                      onClick={() => window.open(project.demoUrl, '_blank')}
                       className={`flex-1 py-3 bg-gradient-to-r ${project.gradient} hover:shadow-lg transition-all text-white`}
                       data-testid={`button-demo-${project.id}`}
                     >
@@ -223,6 +240,7 @@ export default function Projects() {
                        project.demoIcon === Sun ? 'View Weather' : 'Live Demo'}
                     </Button>
                     <Button 
+                      onClick={() => window.open(project.githubUrl, '_blank')}
                       variant="outline"
                       className="px-6 py-3 glass-effect border-slate-700/50 hover:bg-slate-800/20 transition-all"
                       data-testid={`button-code-${project.id}`}
@@ -311,6 +329,7 @@ export default function Projects() {
                   <div className="flex space-x-2">
                     <Button 
                       size="sm"
+                      onClick={() => window.open(project.demoUrl, '_blank')}
                       className={`flex-1 py-2 bg-gradient-to-r ${project.gradient} hover:shadow-lg transition-all text-white`}
                       data-testid={`button-demo-${project.id}`}
                     >
@@ -320,6 +339,7 @@ export default function Projects() {
                     <Button 
                       variant="outline"
                       size="sm"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
                       className="px-3 py-2 glass-effect border-slate-700/50 hover:bg-slate-800/20 transition-all"
                       data-testid={`button-code-${project.id}`}
                     >

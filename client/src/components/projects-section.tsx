@@ -10,53 +10,61 @@ const projects = [
     title: 'Weather App',
     subtitle: 'React Native',
     description: 'Real-time weather application built with React Native, featuring OpenWeather API integration, multi-language support, and location-based forecasts.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/weather.jpg',
     tags: ['React Native', 'OpenWeather API', 'Geolocation', 'Expo'],
-    primaryTag: 'React Native',
-    secondaryTag: 'API',
+    primaryTag: 'Mobile App',
+    secondaryTag: 'Android | ios',
     company: 'ByteBrew Technologies',
     year: '2025',
     demoIcon: Eye,
-    gradient: 'from-blue-500 to-purple-500'
+    gradient: 'from-blue-500 to-purple-500',
+    demoUrl: 'https://expo.dev/accounts/the_dragon/projects/weather-app/builds/43967438-c0c8-4547-bf9a-744fdae73816',
+    githubUrl: 'https://github.com/moiniyan/weather-app'
   },
   {
     id: 'voice-to-text',
     title: 'Voice-to-Text Converter',
     subtitle: 'Web Speech API',
     description: 'Speech-to-text application with real-time transcription capabilities, responsive UI design, and advanced audio processing features.',
-    image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/work-5.jpg',
     tags: ['Web Speech API', 'JavaScript', 'HTML5', 'CSS3'],
     primaryTag: 'Web Speech API',
     secondaryTag: 'Real-time',
     year: '2025',
     demoIcon: Eye,
-    gradient: 'from-emerald-500 to-teal-500'
+    gradient: 'from-emerald-500 to-teal-500',
+    demoUrl: 'https://voicetotextconverterweb.netlify.app/',
+    githubUrl: 'https://github.com/Ammarkashifbhatti/voice-to-text-converter'
   },
   {
     id: 'tic-tac-toe',
     title: 'Tic-Tac-Toe Game',
     subtitle: 'Interactive Web Game',
     description: 'Interactive web-based Tic-Tac-Toe game demonstrating DOM manipulation, event handling, and game logic implementation.',
-    image: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/tik-tak-toe.jpg',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'Game Logic'],
     primaryTag: 'Game',
     secondaryTag: 'Interactive',
     year: '2025',
     demoIcon: Play,
-    gradient: 'from-purple-500 to-pink-500'
+    gradient: 'from-purple-500 to-pink-500',
+    demoUrl: 'https://tick-tack-toe-web.netlify.app/',
+    githubUrl: 'https://github.com/Ammarkashifbhatti/tik-toe-game'
   },
   {
     id: 'weather-forecasting-web',
     title: 'Weather Forecasting Web App',
     subtitle: 'Responsive Web Application',
     description: 'Comprehensive weather application with real-time data, API integration, and responsive design for optimal user experience.',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/work-4.jpeg',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'Weather API'],
     primaryTag: 'Web App',
     secondaryTag: 'Responsive',
     year: '2025',
     demoIcon: Sun,
-    gradient: 'from-amber-500 to-orange-500'
+    gradient: 'from-amber-500 to-orange-500',
+    demoUrl: 'https://what-weather-app.netlify.app/',
+    githubUrl: 'https://github.com/Ammarkashifbhatti/weather-app'
   }
 ];
 
@@ -133,6 +141,7 @@ export function ProjectsSection() {
                 
                 <div className="flex space-x-4">
                   <Button 
+                    onClick={() => window.open(project.demoUrl, '_blank')}
                     className={`flex-1 py-3 bg-gradient-to-r ${project.gradient} hover:shadow-lg transition-all text-white`}
                     data-testid={`button-demo-${project.id}`}
                   >
@@ -141,6 +150,7 @@ export function ProjectsSection() {
                      project.demoIcon === Sun ? 'View Weather' : 'Live Demo'}
                   </Button>
                   <Button 
+                    onClick={() => window.open(project.githubUrl, '_blank')}
                     variant="outline"
                     className="px-6 py-3 glass-effect border-slate-700/50 hover:bg-slate-800/20 transition-all"
                     data-testid={`button-code-${project.id}`}

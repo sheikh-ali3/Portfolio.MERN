@@ -77,7 +77,7 @@ export function ContactSection() {
       title: 'Email',
       value: 'sheikhali12332@gmail.com',
       color: 'emerald',
-      link: 'mailto:sheikhali12332@gmail.com'
+      link: 'https://mail.google.com/mail/?view=cm&fs=1&to=sheikhali12332@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Muhammad%20Ali,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20opportunity%20with%20you.%0A%0ABest%20regards,'
     },
     {
       icon: Phone,
@@ -97,7 +97,7 @@ export function ContactSection() {
     },
     {
       icon: Github,
-      href: 'https://github.com/muhammad-ali',
+      href: 'https://github.com/sheikh-ali3',
       color: 'bg-gray-700 hover:bg-gray-800',
       testId: 'link-github-contact'
     },
@@ -109,7 +109,7 @@ export function ContactSection() {
     },
     {
       icon: Mail,
-      href: 'mailto:sheikhali12332@gmail.com',
+      href: 'https://mail.google.com/mail/?view=cm&fs=1&to=sheikhali12332@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Muhammad%20Ali,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20opportunity%20with%20you.%0A%0ABest%20regards,',
       color: 'bg-red-600 hover:bg-red-700',
       testId: 'link-email-contact'
     }

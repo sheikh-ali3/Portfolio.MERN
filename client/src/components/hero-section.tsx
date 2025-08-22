@@ -69,6 +69,14 @@ export function HeroSection() {
               </Button>
               <Button 
                 variant="outline"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Muhammad-Ali-Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
                 className="px-8 py-4 glass-effect border-white/30 dark:border-slate-700/50 text-white hover:bg-white/20 dark:hover:bg-slate-800/20 font-semibold rounded-full transform hover:scale-105 transition-all"
                 data-testid="button-resume"
               >
@@ -88,7 +96,7 @@ export function HeroSection() {
                 <Linkedin />
               </a>
               <a 
-                href="https://github.com/muhammad-ali" 
+                href="https://github.com/sheikh-ali3" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-2xl text-white hover:text-gray-400 transition-colors transform hover:scale-110"
@@ -97,7 +105,9 @@ export function HeroSection() {
                 <Github />
               </a>
               <a 
-                href="mailto:sheikhali12332@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=sheikhali12332@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Muhammad%20Ali,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20opportunity%20with%20you.%0A%0ABest%20regards,"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-2xl text-white hover:text-red-400 transition-colors transform hover:scale-110"
                 data-testid="link-email"
               >

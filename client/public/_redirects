@@ -4,5 +4,23 @@
 # Handle JavaScript files explicitly - prevent fallback to index.html
 *.js     -    200
 
+# Handle module JavaScript files
+*.mjs    -    200
+
+# Handle image files
+*.jpg    -    200
+*.jpeg   -    200
+*.png    -    200
+*.gif    -    200
+*.svg    -    200
+*.ico    -    200
+
+# Handle other asset files
+*.pdf    -    200
+*.woff   -    200
+*.woff2  -    200
+*.ttf    -    200
+*.eot    -    200
+
 # Handle SPA routing - redirect all other routes to index.html
 /*    /index.html    200

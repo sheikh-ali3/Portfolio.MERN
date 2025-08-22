@@ -5,56 +5,37 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Handle SPA routing - redirect all routes to index.html
+# Handle assets first - prevent fallback to index.html
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+  force = true
+
+# Handle SPA routing - redirect all other routes to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
 
-# Alternative redirect pattern for better compatibility
-[[redirects]]
-  from = "/about"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/skills"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/experience"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/projects"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/contact"
-  to = "/index.html"
-  status = 200
-
-# Handle CSS files with proper MIME types
+# Explicit MIME type headers for CSS files in assets
 [[headers]]
-  for = "*.css"
+  for = "/assets/*.css"
   [headers.values]
     Content-Type = "text/css"
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Handle JavaScript files with proper MIME types
+# Explicit MIME type headers for JavaScript files in assets
 [[headers]]
-  for = "*.js"
+  for = "/assets/*.js"
   [headers.values]
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Handle module JavaScript files
+# Explicit MIME type headers for module JavaScript files in assets
 [[headers]]
-  for = "*.mjs"
+  for = "/assets/*.mjs"
   [headers.values]
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
@@ -70,6 +51,11 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # Cache headers for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "*.png"
   [headers.values]

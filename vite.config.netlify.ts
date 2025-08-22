@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
-  base: '', // Changed to empty string for relative paths
+  base: '',
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
@@ -42,7 +42,10 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true
       }
-    }
+    },
+    // Ensure proper asset handling
+    assetsInlineLimit: 0,
+    cssCodeSplit: false
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']

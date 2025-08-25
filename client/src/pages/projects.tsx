@@ -116,7 +116,7 @@ const allProjects = [
     demoIcon: Globe,
     gradient: 'from-violet-500 to-purple-500',
     featured: false,
-    demoUrl: 'https://github.com/sheikh-ali3/portfolio-website',
+    demoUrl: 'https://developerali.site',
     githubUrl: 'https://github.com/sheikh-ali3/portfolio-website'
   },
   {

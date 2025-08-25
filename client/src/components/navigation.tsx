@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useLocation } from 'wouter';
-import { Menu } from 'lucide-react';
+import { Menu, MessageCircle } from 'lucide-react';
 
 const navItems = [
   { href: '#home', label: 'Home', isRoute: false },
@@ -97,6 +97,18 @@ export function Navigation() {
           </div>
           
           <div className="flex items-center space-x-4">
+            {/* WhatsApp Button */}
+            <a 
+              href="https://wa.me/923255005950" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden md:flex items-center space-x-2 px-4 py-2 rounded-full bg-green-500 hover:bg-green-600 text-white transition-colors transform hover:scale-110"
+              data-testid="whatsapp-button"
+            >
+              <MessageCircle className="h-5 w-5" />
+              <span className="text-sm font-medium">Chat Now!</span>
+            </a>
+            
             {/* Mobile Menu */}
             <Sheet>
               <SheetTrigger asChild>

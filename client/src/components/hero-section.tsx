@@ -31,8 +31,8 @@ export function HeroSection() {
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-emerald-500/20 dark:bg-emerald-400/10 rounded-full animate-float-slow"></div>
       </div>
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 items-center">
+      <div className="container mx-auto px-8 lg:px-16 py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-4 items-center">
           <div className="text-center lg:text-left animate-slideInUp">
             <div className="flex justify-center lg:justify-start mb-4">
               <Badge className="glass-effect border-white/30 dark:border-slate-700/50 text-white bg-white/10 dark:bg-slate-800/20">
@@ -127,7 +127,7 @@ export function HeroSection() {
           
           <div className="flex justify-center lg:justify-end animate-fadeIn">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full glass-effect p-2 animate-glow">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full glass-effect p-2 animate-glow">
                 <img 
                   src={profileImage} 
                   alt="Muhammad Ali - Software Engineer" 

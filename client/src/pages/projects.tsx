@@ -11,7 +11,7 @@ const allProjects = [
     title: 'Weather App',
     subtitle: 'React Native',
     description: 'Real-time weather application built with React Native, featuring OpenWeather API integration, multi-language support, and location-based forecasts.',
-    image: '/weather.jpg',
+    image: '/icon.jpeg',
     tags: ['React Native', 'OpenWeather API', 'Geolocation', 'Expo'],
     primaryTag: 'React Native',
     secondaryTag: 'API',

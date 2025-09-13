@@ -71,6 +71,38 @@ const allProjects = [
     githubUrl: 'https://github.com/sheikh-ali3/moaqa-job-portal'
   },
   {
+    id: 'dispatchnhaul-trucking',
+    title: 'DispatchNHaul',
+    subtitle: 'USA Trucking & Logistics Company',
+    description: 'Professional website for a USA-based trucking and logistics company. Features comprehensive service information, fleet management, logistics tracking, and client portal functionality for efficient transportation and cargo delivery services.',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    tags: ['Web Development', 'Logistics', 'Trucking', 'Transportation', 'Client Portal', 'Fleet Management', 'USA Business'],
+    primaryTag: 'Web Development',
+    secondaryTag: 'Logistics',
+    year: '2024',
+    demoIcon: Globe,
+    gradient: 'from-orange-500 to-red-500',
+    status: 'delivered',
+    demoUrl: 'https://dispatchnhaul.com/',
+    githubUrl: 'https://github.com/sheikh-ali3/dispatchnhaul-website'
+  },
+  {
+    id: 'swiftrcm-platform',
+    title: 'SwiftRCM',
+    subtitle: 'Revenue Cycle Management Platform',
+    description: 'Comprehensive Revenue Cycle Management (RCM) platform designed to streamline healthcare billing, claims processing, and revenue optimization. Features advanced analytics, automated workflows, and integrated payment processing for healthcare providers.',
+    image: '/swift.jpg',
+    tags: ['Healthcare', 'Revenue Cycle Management', 'Billing', 'Claims Processing', 'Analytics', 'Payment Processing', 'Healthcare IT'],
+    primaryTag: 'Healthcare',
+    secondaryTag: 'RCM',
+    year: '2024',
+    demoIcon: Globe,
+    gradient: 'from-cyan-500 to-blue-500',
+    status: 'delivered',
+    demoUrl: 'https://swiftrcm.com/',
+    githubUrl: 'https://github.com/sheikh-ali3/swiftrcm-platform'
+  },
+  {
     id: 'clinical-code-dictionary',
     title: 'CodeQuest',
     subtitle: 'Healthcare Technology',

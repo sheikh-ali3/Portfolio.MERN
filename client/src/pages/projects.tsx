@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer';
 import { ExternalLink, Github, Eye, Play, Sun, Code, Database, Globe } from 'lucide-react';
 
 const allProjects = [
+  // 2025 Projects (Most Recent)
   {
     id: 'weather-app-rn',
     title: 'Weather App',
@@ -35,7 +36,7 @@ const allProjects = [
     year: '2025',
     demoIcon: Eye,
     gradient: 'from-emerald-500 to-teal-500',
-    status: 'delivered',
+    status: 'practice',
     demoUrl: 'https://voicetotextconverterweb.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/voice-to-text-converter'
   },
@@ -67,10 +68,91 @@ const allProjects = [
     year: '2025',
     demoIcon: Sun,
     gradient: 'from-amber-500 to-orange-500',
-    status: 'delivered',
+    status: 'practice',
     demoUrl: 'https://what-weather-app.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/weather-app'
   },
+  {
+    id: 'portfolio-website',
+    title: 'Personal Portfolio Website',
+    subtitle: 'React + TypeScript',
+    description: 'Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS featuring dark theme, smooth animations, and contact functionality.',
+    image: '/portfolio.jpg',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
+    primaryTag: 'React',
+    secondaryTag: 'Portfolio',
+    year: '2025',
+    demoIcon: Globe,
+    gradient: 'from-violet-500 to-purple-500',
+    status: 'practice',
+    demoUrl: 'https://developerali.site',
+    githubUrl: 'https://github.com/sheikh-ali3/portfolio-website'
+  },
+  {
+    id: 'resume-match',
+    title: 'ResumeMatch',
+    subtitle: 'AI-Powered Resume Analysis',
+    description: 'Intelligent full-stack platform that uses Natural Language Processing (NLP) to analyze compatibility between candidate resumes and job descriptions. Features JWT authentication, multi-format file processing, and AI-powered skill matching algorithms.',
+    image: '/resumeAI.jpg',
+    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'AI', 'JWT', 'Drizzle ORM'],
+    primaryTag: 'AI/NLP',
+    secondaryTag: 'Full-Stack',
+    year: '2025',
+    demoIcon: Eye,
+    gradient: 'from-purple-500 to-pink-500',
+    status: 'delivered',
+    demoUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker.io',
+    githubUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker'
+  },
+  {
+    id: 'autism-therapy-platform',
+    title: 'Mosaic Mind',
+    subtitle: 'Healthcare & Support Services',
+    description: 'Comprehensive digital platform providing therapies and support services for individuals with autism. Features specialized therapy programs, progress tracking, family support resources, and professional guidance for autism care and development.',
+    image: '/logo.jpg',
+    tags: ['Healthcare', 'Therapy', 'Support Services', 'Accessibility', 'Family Care'],
+    primaryTag: 'Healthcare',
+    secondaryTag: 'Therapy',
+    year: '2025',
+    demoIcon: Globe,
+    gradient: 'from-teal-500 to-cyan-500',
+    status: 'ongoing',
+    demoUrl: 'https://nimble-horse-a37b81.netlify.app/',
+    githubUrl: 'https://github.com/Shahzaib8250/MosaicMind'
+  },
+  {
+    id: 'quickcart-grocery-app',
+    title: 'QuickCart',
+    subtitle: 'Modern Grocery Delivery App',
+    description: 'A beautiful, feature-rich grocery delivery app built with React Native and Expo. Features modern UI/UX design, real-time cart management, flying animations, tab navigation, and comprehensive grocery shopping experience with instant/scheduled delivery options.',
+    image: '/icon.png',
+    tags: ['React Native', 'Expo', 'TypeScript', 'Mobile App', 'E-commerce', 'Grocery Delivery', 'Animations', 'Context API'],
+    primaryTag: 'React Native',
+    secondaryTag: 'Mobile App',
+    year: '2025',
+    demoIcon: Globe,
+    gradient: 'from-green-500 to-emerald-500',
+    status: 'ongoing',
+    demoUrl: 'https://expo.dev/@sheikh-ali3/quickcart',
+    githubUrl: 'https://github.com/moiniyan/quick-cart'
+  },
+  {
+    id: 'moaqa-job-portal',
+    title: 'MOAQA Job Portal',
+    subtitle: 'Recruitment & Hiring Platform',
+    description: 'Comprehensive job portal and recruitment platform for MOAQA, featuring job search, applicant tracking, HR management, and talent analytics. Connects job seekers with top employers and provides enterprises with powerful recruitment tools.',
+    image: '/jbPortal.jpg',
+    tags: ['React', 'TypeScript', 'Express.js', 'MongoDB', 'Node.js', 'Recruitment', 'HR Management', 'Job Portal'],
+    primaryTag: 'Full-Stack',
+    secondaryTag: 'Recruitment',
+    year: '2025',
+    demoIcon: Globe,
+    gradient: 'from-blue-600 to-indigo-600',
+    status: 'delivered',
+    demoUrl: 'http://jbportal.moaqa.com/',
+    githubUrl: 'https://github.com/sheikh-ali3/moaqa-job-portal'
+  },
+  // 2024 Projects (Older)
   {
     id: 'quiz-platform',
     title: 'Quiz Platform',
@@ -102,22 +184,6 @@ const allProjects = [
     status: 'practice',
     demoUrl: 'https://github.com/sheikh-ali3/bank-management',
     githubUrl: 'https://github.com/sheikh-ali3/bank-management'
-  },
-  {
-    id: 'portfolio-website',
-    title: 'Personal Portfolio Website',
-    subtitle: 'React + TypeScript',
-    description: 'Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS featuring dark theme, smooth animations, and contact functionality.',
-    image: '/portfolio.jpg',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
-    primaryTag: 'React',
-    secondaryTag: 'Portfolio',
-    year: '2025',
-    demoIcon: Globe,
-    gradient: 'from-violet-500 to-purple-500',
-    status: 'practice',
-    demoUrl: 'https://developerali.site',
-    githubUrl: 'https://github.com/sheikh-ali3/portfolio-website'
   },
   {
     id: 'crm-moaqa',
@@ -152,38 +218,6 @@ const allProjects = [
     githubUrl: 'https://github.com/sheikh-ali3/CodeQuest'
   },
   {
-    id: 'resume-match',
-    title: 'ResumeMatch',
-    subtitle: 'AI-Powered Resume Analysis',
-    description: 'Intelligent full-stack platform that uses Natural Language Processing (NLP) to analyze compatibility between candidate resumes and job descriptions. Features JWT authentication, multi-format file processing, and AI-powered skill matching algorithms.',
-    image: '/resumeAI.jpg',
-    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'AI', 'JWT', 'Drizzle ORM'],
-    primaryTag: 'AI/NLP',
-    secondaryTag: 'Full-Stack',
-    year: '2025',
-    demoIcon: Eye,
-    gradient: 'from-purple-500 to-pink-500',
-    status: 'delivered',
-    demoUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker.io',
-    githubUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker'
-  },
-  {
-    id: 'moaqa-job-portal',
-    title: 'MOAQA Job Portal',
-    subtitle: 'Recruitment & Hiring Platform',
-    description: 'Comprehensive job portal and recruitment platform for MOAQA, featuring job search, applicant tracking, HR management, and talent analytics. Connects job seekers with top employers and provides enterprises with powerful recruitment tools.',
-    image: '/jbPortal.jpg',
-    tags: ['React', 'TypeScript', 'Express.js', 'MongoDB', 'Node.js', 'Recruitment', 'HR Management', 'Job Portal'],
-    primaryTag: 'Full-Stack',
-    secondaryTag: 'Recruitment',
-    year: '2024',
-    demoIcon: Globe,
-    gradient: 'from-blue-600 to-indigo-600',
-    status: 'delivered',
-    demoUrl: 'http://jbportal.moaqa.com/',
-    githubUrl: 'https://github.com/sheikh-ali3/moaqa-job-portal'
-  },
-  {
     id: 'dispatchnhaul-trucking',
     title: 'Dispatch N Haul',
     subtitle: 'USA Trucking & Logistics Company',
@@ -214,38 +248,6 @@ const allProjects = [
     status: 'delivered',
     demoUrl: 'https://swiftrcm.com/',
     githubUrl: 'https://github.com/sheikh-ali3/swiftrcm-platform'
-  },
-  {
-    id: 'autism-therapy-platform',
-    title: 'Mosaic Mind',
-    subtitle: 'Healthcare & Support Services',
-    description: 'Comprehensive digital platform providing therapies and support services for individuals with autism. Features specialized therapy programs, progress tracking, family support resources, and professional guidance for autism care and development.',
-    image: '/logo.jpg',
-    tags: ['Healthcare', 'Therapy', 'Support Services', 'Accessibility', 'Family Care'],
-    primaryTag: 'Healthcare',
-    secondaryTag: 'Therapy',
-    year: '2025',
-    demoIcon: Globe,
-    gradient: 'from-teal-500 to-cyan-500',
-    status: 'ongoing',
-    demoUrl: 'https://nimble-horse-a37b81.netlify.app/',
-    githubUrl: 'https://github.com/Shahzaib8250/MosaicMind'
-  },
-  {
-    id: 'quickcart-grocery-app',
-    title: 'QuickCart',
-    subtitle: 'Modern Grocery Delivery App',
-    description: 'A beautiful, feature-rich grocery delivery app built with React Native and Expo. Features modern UI/UX design, real-time cart management, flying animations, tab navigation, and comprehensive grocery shopping experience with instant/scheduled delivery options.',
-    image: '/icon.png',
-    tags: ['React Native', 'Expo', 'TypeScript', 'Mobile App', 'E-commerce', 'Grocery Delivery', 'Animations', 'Context API'],
-    primaryTag: 'React Native',
-    secondaryTag: 'Mobile App',
-    year: '2025',
-    demoIcon: Globe,
-    gradient: 'from-green-500 to-emerald-500',
-    status: 'ongoing',
-    demoUrl: 'https://expo.dev/@sheikh-ali3/quickcart',
-    githubUrl: 'https://github.com/moiniyan/quick-cart'
   }
 ];
 

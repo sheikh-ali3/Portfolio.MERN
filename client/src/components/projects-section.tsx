@@ -6,55 +6,6 @@ import { ExternalLink, Github, Eye, Play, Sun, Globe } from 'lucide-react';
 
 const allProjects = [
   {
-    id: 'weather-app-rn',
-    title: 'Weather App',
-    subtitle: 'React Native',
-    description: 'Real-time weather application built with React Native, featuring OpenWeather API integration, multi-language support, and location-based forecasts.',
-    image: '/icon.jpeg',
-    tags: ['React Native', 'OpenWeather API', 'Geolocation', 'Expo'],
-    primaryTag: 'Mobile App',
-    secondaryTag: 'Android | ios',
-    company: 'ByteBrew Technologies',
-    year: '2025',
-    demoIcon: Eye,
-    gradient: 'from-blue-500 to-purple-500',
-    status: 'ongoing',
-    demoUrl: 'https://expo.dev/accounts/the_dragon/projects/weather-app/builds/43967438-c0c8-4547-bf9a-744fdae73816',
-    githubUrl: 'https://github.com/moiniyan/weather-app'
-  },
-  {
-    id: 'voice-to-text',
-    title: 'Voice-to-Text Converter',
-    subtitle: 'Web Speech API',
-    description: 'Speech-to-text application with real-time transcription capabilities, responsive UI design, and advanced audio processing features.',
-    image: '/work-5.jpg',
-    tags: ['Web Speech API', 'JavaScript', 'HTML5', 'CSS3'],
-    primaryTag: 'Web Speech API',
-    secondaryTag: 'Real-time',
-    year: '2025',
-    demoIcon: Eye,
-    gradient: 'from-emerald-500 to-teal-500',
-    status: 'delivered',
-    demoUrl: 'https://voicetotextconverterweb.netlify.app/',
-    githubUrl: 'https://github.com/Ammarkashifbhatti/voice-to-text-converter'
-  },
-  {
-    id: 'tic-tac-toe',
-    title: 'Tic-Tac-Toe Game',
-    subtitle: 'Interactive Web Game',
-    description: 'Interactive web-based Tic-Tac-Toe game demonstrating DOM manipulation, event handling, and game logic implementation.',
-    image: '/tik-tak-toe.jpg',
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'Game Logic'],
-    primaryTag: 'Game',
-    secondaryTag: 'Interactive',
-    year: '2025',
-    demoIcon: Play,
-    gradient: 'from-purple-500 to-pink-500',
-    status: 'practice',
-    demoUrl: 'https://tick-tack-toe-web.netlify.app/',
-    githubUrl: 'https://github.com/Ammarkashifbhatti/tik-toe-game'
-  },
-  {
     id: 'moaqa-job-portal',
     title: 'MOAQA Job Portal',
     subtitle: 'Recruitment & Hiring Platform',
@@ -63,7 +14,7 @@ const allProjects = [
     tags: ['React', 'TypeScript', 'Express.js', 'MongoDB', 'Node.js', 'Recruitment', 'HR Management', 'Job Portal'],
     primaryTag: 'Full-Stack',
     secondaryTag: 'Recruitment',
-    year: '2024',
+    year: '2025',
     demoIcon: Globe,
     gradient: 'from-blue-600 to-indigo-600',
     status: 'delivered',
@@ -71,75 +22,11 @@ const allProjects = [
     githubUrl: 'https://github.com/sheikh-ali3/moaqa-job-portal'
   },
   {
-    id: 'dispatchnhaul-trucking',
-    title: 'DispatchNHaul',
-    subtitle: 'USA Trucking & Logistics Company',
-    description: 'Professional website for a USA-based trucking and logistics company. Features comprehensive service information, fleet management, logistics tracking, and client portal functionality for efficient transportation and cargo delivery services.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    tags: ['Web Development', 'Logistics', 'Trucking', 'Transportation', 'Client Portal', 'Fleet Management', 'USA Business'],
-    primaryTag: 'Web Development',
-    secondaryTag: 'Logistics',
-    year: '2024',
-    demoIcon: Globe,
-    gradient: 'from-orange-500 to-red-500',
-    status: 'delivered',
-    demoUrl: 'https://dispatchnhaul.com/',
-    githubUrl: 'https://github.com/sheikh-ali3/dispatchnhaul-website'
-  },
-  {
-    id: 'swiftrcm-platform',
-    title: 'SwiftRCM',
-    subtitle: 'Revenue Cycle Management Platform',
-    description: 'Comprehensive Revenue Cycle Management (RCM) platform designed to streamline healthcare billing, claims processing, and revenue optimization. Features advanced analytics, automated workflows, and integrated payment processing for healthcare providers.',
-    image: '/swift.jpg',
-    tags: ['Healthcare', 'Revenue Cycle Management', 'Billing', 'Claims Processing', 'Analytics', 'Payment Processing', 'Healthcare IT'],
-    primaryTag: 'Healthcare',
-    secondaryTag: 'RCM',
-    year: '2024',
-    demoIcon: Globe,
-    gradient: 'from-cyan-500 to-blue-500',
-    status: 'delivered',
-    demoUrl: 'https://swiftrcm.com/',
-    githubUrl: 'https://github.com/sheikh-ali3/swiftrcm-platform'
-  },
-  {
-    id: 'clinical-code-dictionary',
-    title: 'CodeQuest',
-    subtitle: 'Healthcare Technology',
-    description: 'NLP-Based Clinical Code Dictionary. Advanced full-stack web application for searching and managing medical codes across multiple healthcare systems (ICD-9, ICD-10, CPT, HCPCS, SNOMED, LOINC, and HCC). Features NLP-powered search, CSV bulk operations, and comprehensive admin interface.',
-    image: '/codeQuest.jpg',
-    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'Healthcare', 'Drizzle ORM'],
-    primaryTag: 'Healthcare',
-    secondaryTag: 'Full-Stack',
-    year: '2024',
-    demoIcon: Eye,
-    gradient: 'from-blue-500 to-indigo-500',
-    status: 'delivered',
-    demoUrl: 'https://code-quest-taupe-chi.vercel.app/',
-    githubUrl: 'https://github.com/sheikh-ali3/CodeQuest'
-  },
-  {
-    id: 'resume-match',
-    title: 'ResumeMatch',
-    subtitle: 'AI-Powered Resume Analysis',
-    description: 'Intelligent full-stack platform that uses Natural Language Processing (NLP) to analyze compatibility between candidate resumes and job descriptions. Features JWT authentication, multi-format file processing, and AI-powered skill matching algorithms.',
-    image: '/resumeAI.jpg',
-    tags: ['React', 'TypeScript', 'Express.js', 'PostgreSQL', 'NLP', 'AI', 'JWT', 'Drizzle ORM'],
-    primaryTag: 'AI/NLP',
-    secondaryTag: 'Full-Stack',
-    year: '2024',
-    demoIcon: Eye,
-    gradient: 'from-purple-500 to-pink-500',
-    status: 'delivered',
-    demoUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker.io',
-    githubUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker'
-  },
-  {
     id: 'autism-therapy-platform',
     title: 'Autism Therapy Platform',
     subtitle: 'Healthcare & Support Services',
     description: 'Comprehensive digital platform providing therapies and support services for individuals with autism. Features specialized therapy programs, progress tracking, family support resources, and professional guidance for autism care and development.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    image: '/logo.jpg',
     tags: ['Healthcare', 'Therapy', 'Support Services', 'Accessibility', 'Family Care'],
     primaryTag: 'Healthcare',
     secondaryTag: 'Therapy',
@@ -150,22 +37,6 @@ const allProjects = [
     demoUrl: 'https://nimble-horse-a37b81.netlify.app/',
     githubUrl: 'https://github.com/sheikh-ali3/autism-therapy-platform'
   },
-  {
-    id: 'quickcart-grocery-app',
-    title: 'QuickCart',
-    subtitle: 'Modern Grocery Delivery App',
-    description: 'A beautiful, feature-rich grocery delivery app built with React Native and Expo. Features modern UI/UX design, real-time cart management, flying animations, tab navigation, and comprehensive grocery shopping experience with instant/scheduled delivery options.',
-    image: 'https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    tags: ['React Native', 'Expo', 'TypeScript', 'Mobile App', 'E-commerce', 'Grocery Delivery', 'Animations', 'Context API'],
-    primaryTag: 'React Native',
-    secondaryTag: 'Mobile App',
-    year: '2025',
-    demoIcon: Play,
-    gradient: 'from-green-500 to-emerald-500',
-    status: 'ongoing',
-    demoUrl: 'https://expo.dev/@sheikh-ali3/quickcart',
-    githubUrl: 'https://github.com/sheikh-ali3/quickcart-grocery-app'
-  }
 ];
 
 export function ProjectsSection() {
@@ -173,7 +44,7 @@ export function ProjectsSection() {
   
   // Filter to show only 2 delivered projects for the home page
   const highlightedProjects = allProjects
-    .filter(project => project.status === 'delivered')
+    .filter(project => project.status === 'delivered' || project.status === 'ongoing')
     .slice(0, 2);
   
   return (
@@ -187,7 +58,7 @@ export function ProjectsSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-300">
-            Selected delivered projects showcasing my completed work
+            Selected delivered and ongoing projects showcasing my skills
           </p>
         </div>
         
@@ -251,8 +122,9 @@ export function ProjectsSection() {
                     data-testid={`button-demo-${project.id}`}
                   >
                     <project.demoIcon className="w-4 h-4 mr-2" />
-                    {project.demoIcon === Play ? 'Play Game' : 
-                     project.demoIcon === Sun ? 'View Weather' : 'Live Demo'}
+                    {project.demoIcon === Play? 'Play Game' : 
+                     project.demoIcon === Sun ? 'View Weather' :
+                     project.demoIcon === Globe ? 'Live Demo' : 'View'}
                   </Button>
                   <Button 
                     onClick={() => window.open(project.githubUrl, '_blank')}

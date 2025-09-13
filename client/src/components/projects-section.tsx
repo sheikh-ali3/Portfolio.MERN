@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'wouter';
-import { ExternalLink, Github, Eye, Play, Sun } from 'lucide-react';
+import { ExternalLink, Github, Eye, Play, Sun, Globe } from 'lucide-react';
 
 const allProjects = [
   {
@@ -18,7 +18,7 @@ const allProjects = [
     year: '2025',
     demoIcon: Eye,
     gradient: 'from-blue-500 to-purple-500',
-    featured: true,
+    status: 'ongoing',
     demoUrl: 'https://expo.dev/accounts/the_dragon/projects/weather-app/builds/43967438-c0c8-4547-bf9a-744fdae73816',
     githubUrl: 'https://github.com/moiniyan/weather-app'
   },
@@ -34,7 +34,7 @@ const allProjects = [
     year: '2025',
     demoIcon: Eye,
     gradient: 'from-emerald-500 to-teal-500',
-    featured: true,
+    status: 'delivered',
     demoUrl: 'https://voicetotextconverterweb.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/voice-to-text-converter'
   },
@@ -50,24 +50,25 @@ const allProjects = [
     year: '2025',
     demoIcon: Play,
     gradient: 'from-purple-500 to-pink-500',
+    status: 'practice',
     demoUrl: 'https://tick-tack-toe-web.netlify.app/',
     githubUrl: 'https://github.com/Ammarkashifbhatti/tik-toe-game'
   },
   {
-    id: 'weather-forecasting-web',
-    title: 'Weather Forecasting Web App',
-    subtitle: 'Responsive Web Application',
-    description: 'Comprehensive weather application with real-time data, API integration, and responsive design for optimal user experience.',
-    image: '/work-4.jpeg',
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'Weather API'],
-    primaryTag: 'Web App',
-    secondaryTag: 'Responsive',
-    year: '2025',
-    demoIcon: Sun,
-    gradient: 'from-amber-500 to-orange-500',
-    featured: false,
-    demoUrl: 'https://what-weather-app.netlify.app/',
-    githubUrl: 'https://github.com/Ammarkashifbhatti/weather-app'
+    id: 'moaqa-job-portal',
+    title: 'MOAQA Job Portal',
+    subtitle: 'Recruitment & Hiring Platform',
+    description: 'Comprehensive job portal and recruitment platform for MOAQA, featuring job search, applicant tracking, HR management, and talent analytics. Connects job seekers with top employers and provides enterprises with powerful recruitment tools.',
+    image: '/jbPortal.jpg',
+    tags: ['React', 'TypeScript', 'Express.js', 'MongoDB', 'Node.js', 'Recruitment', 'HR Management', 'Job Portal'],
+    primaryTag: 'Full-Stack',
+    secondaryTag: 'Recruitment',
+    year: '2024',
+    demoIcon: Globe,
+    gradient: 'from-blue-600 to-indigo-600',
+    status: 'delivered',
+    demoUrl: 'http://jbportal.moaqa.com/',
+    githubUrl: 'https://github.com/sheikh-ali3/moaqa-job-portal'
   },
   {
     id: 'clinical-code-dictionary',
@@ -81,7 +82,7 @@ const allProjects = [
     year: '2024',
     demoIcon: Eye,
     gradient: 'from-blue-500 to-indigo-500',
-    featured: true,
+    status: 'delivered',
     demoUrl: 'https://code-quest-taupe-chi.vercel.app/',
     githubUrl: 'https://github.com/sheikh-ali3/CodeQuest'
   },
@@ -97,35 +98,69 @@ const allProjects = [
     year: '2024',
     demoIcon: Eye,
     gradient: 'from-purple-500 to-pink-500',
-    featured: true,
+    status: 'delivered',
     demoUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker.io',
     githubUrl: 'https://github.com/sheikh-ali3/CompatibilityMatchmaker'
+  },
+  {
+    id: 'autism-therapy-platform',
+    title: 'Autism Therapy Platform',
+    subtitle: 'Healthcare & Support Services',
+    description: 'Comprehensive digital platform providing therapies and support services for individuals with autism. Features specialized therapy programs, progress tracking, family support resources, and professional guidance for autism care and development.',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    tags: ['Healthcare', 'Therapy', 'Support Services', 'Accessibility', 'Family Care'],
+    primaryTag: 'Healthcare',
+    secondaryTag: 'Therapy',
+    year: '2025',
+    demoIcon: Globe,
+    gradient: 'from-teal-500 to-cyan-500',
+    status: 'ongoing',
+    demoUrl: 'https://nimble-horse-a37b81.netlify.app/',
+    githubUrl: 'https://github.com/sheikh-ali3/autism-therapy-platform'
+  },
+  {
+    id: 'quickcart-grocery-app',
+    title: 'QuickCart',
+    subtitle: 'Modern Grocery Delivery App',
+    description: 'A beautiful, feature-rich grocery delivery app built with React Native and Expo. Features modern UI/UX design, real-time cart management, flying animations, tab navigation, and comprehensive grocery shopping experience with instant/scheduled delivery options.',
+    image: 'https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+    tags: ['React Native', 'Expo', 'TypeScript', 'Mobile App', 'E-commerce', 'Grocery Delivery', 'Animations', 'Context API'],
+    primaryTag: 'React Native',
+    secondaryTag: 'Mobile App',
+    year: '2025',
+    demoIcon: Play,
+    gradient: 'from-green-500 to-emerald-500',
+    status: 'ongoing',
+    demoUrl: 'https://expo.dev/@sheikh-ali3/quickcart',
+    githubUrl: 'https://github.com/sheikh-ali3/quickcart-grocery-app'
   }
 ];
 
 export function ProjectsSection() {
   const [, setLocation] = useLocation();
   
-  // Filter to show only featured projects
-  const featuredProjects = allProjects.filter(project => project.featured === true);
+  // Filter to show only 2 delivered projects for the home page
+  const highlightedProjects = allProjects
+    .filter(project => project.status === 'delivered')
+    .slice(0, 2);
   
   return (
     <section id="projects" className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            Featured{' '}
+            Highlighted{' '}
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
           <p className="text-xl text-gray-300">
-            Some of my recent work and personal projects
+            Selected delivered projects showcasing my completed work
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {featuredProjects.map((project, index) => (
+          {highlightedProjects.map((project, index) => (
             <Card 
               key={project.id}
               className="glass-effect border-slate-700/50 bg-slate-800/20 overflow-hidden group hover:scale-105 transition-all duration-300"
